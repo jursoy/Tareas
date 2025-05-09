@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Tareas Mágica</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffcde6" />
+  <link rel="icon" href="icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('SW registrado!', reg))
+          .catch(err => console.error('SW falló', err));
+      });
+    }
+  </script>
+  <!-- Aquí pegas el resto del <style> y contenido que ya tienes (lo del modo noche, la lista, etc) -->
+</head>
+<body>
+  <!-- Tu contenido completo va aquí (el HTML que ya hicimos) -->
+</body>
+</html>
